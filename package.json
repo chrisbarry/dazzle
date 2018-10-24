@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "engine42": "./index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/engine42/engine42.git"
@@ -15,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/engine42/engine42/issues"
   },
-  "homepage": "https://github.com/engine42/engine42#readme"
+  "homepage": "https://github.com/engine42/engine42#readme",
+  "dependencies": {
+    "commander": "^2.19.0"
+  }
 }
