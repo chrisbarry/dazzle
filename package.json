@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/engine42/engine42#readme",
   "dependencies": {
-    "commander": "^2.19.0"
+    "commander": "^2.19.0",
+    "grunt-init": "^0.3.2"
   }
 }
