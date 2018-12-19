@@ -20,7 +20,10 @@
   },
   "homepage": "https://github.com/engine42/engine42#readme",
   "dependencies": {
-    "commander": "^2.19.0",
-    "grunt-init": "^0.3.2"
+    "commander": "2.19.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "flik-web": "0.0.1",
+    "grunt-init": "0.3.2"
   }
 }
