@@ -1,0 +1,1 @@
+window.engine42 = require('flik-web');
