@@ -94,7 +94,7 @@ program
             console.log('copied index.json');
         });
 
-        ncp(path.join(process.cwd(), "components2"), path.join(destinationDir, "app", "components2"), function (err) {
+        ncp(path.join(process.cwd(), "components"), path.join(destinationDir, "app", "components"), function (err) {
             if (err) {
                 return console.error(err);
             }
