@@ -1,24 +1,24 @@
 {
-  "name": "engine42",
+  "name": "razzle-dazzle",
   "version": "0.0.1",
-  "description": "Enginething",
+  "description": "Dazzle animation engine",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "engine42": "nodemon ./index.js"
+    "dazzle": "./index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/engine42/engine42.git"
+    "url": "git+https://github.com/dazzle-org/dazzle.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/engine42/engine42/issues"
+    "url": "https://github.com/dazzle-org/dazzle/issues"
   },
-  "homepage": "https://github.com/engine42/engine42#readme",
+  "homepage": "https://github.com/dazzle-org/dazzle#readme",
   "dependencies": {
     "browserify": "^16.2.3",
     "commander": "2.19.0",
