@@ -1,2 +1,1 @@
-Picture of Baz with Jazz hands....
-
+DAZZLE
