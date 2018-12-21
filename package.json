@@ -20,16 +20,14 @@
   },
   "homepage": "https://github.com/dazzle-org/dazzle#readme",
   "dependencies": {
-    "browserify": "^16.2.3",
     "commander": "2.19.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "flik-web": "0.0.1",
     "grunt-init": "0.3.2",
     "ncp": "^2.0.0"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9",
-    "npm-run-all": "^4.1.5"
+    "browserify": "^16.2.3",
+    "nodemon": "^1.18.9"
   }
 }
