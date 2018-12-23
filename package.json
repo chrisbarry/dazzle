@@ -1,6 +1,6 @@
 {
   "name": "razzle-dazzle",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Dazzle animation engine",
   "main": "index.js",
   "scripts": {
