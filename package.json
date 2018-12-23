@@ -4,7 +4,8 @@
   "description": "Dazzle animation engine",
   "main": "index.js",
   "scripts": {
-    "build-engine-production": "browserify ./scripts/source.js -o ./scripts/bundle.es5.js && babel ./scripts/bundle.js > ./scripts/bundle.es5.js && uglifyjs ./scripts/bundle.es5.js --output ./scripts/bundle.min.js",
+    "build-engine-production": "browserify ./scripts/source.js -o ./scripts/bundle.js && babel ./scripts/bundle.js > ./scripts/bundle.es5.js && uglifyjs ./scripts/bundle.es5.js --output ./scripts/bundle.min.js",
+    "build-engine-extra": "browserify --full-paths ./scripts/source.js -o ./scripts/bundle.js",
     "build-engine": "browserify ./scripts/source.js -o ./scripts/bundle.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

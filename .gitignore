@@ -2,4 +2,3 @@ node_modules/
 .idea/
 scripts/bundle.js
 scripts/bundle.es5.js
-scripts/bundle.min.js
