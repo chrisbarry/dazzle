@@ -3,7 +3,7 @@
   "scene": {
     "root": {
       "children": {
-        "TestCardRoot": {
+        "BaseRenderer": {
           "components": {
             "flikHtmlRenderer": {
               "data": {
