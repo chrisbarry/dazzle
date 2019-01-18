@@ -51,9 +51,48 @@ program
         //This loads the app directory staticly
         app.use("/app", express.static(process.cwd()));
 
+
+
+        //browserify party.js -o ./dist/party.js -t [ babelify --presets [ env ] ]
+
+        //const {spawn} = require('child_process');
+
+        //const child = spawn('ls', ['-a', '-l']);
+
+
+        var browserify = require('browserify');
+
+        //app.get('/_dazzlecompile/', browserify(__dirname + '/client/file.js');s
+
+        //https://github.com/browserify/browserify-handbook#using-the-api-directly
+        app.get("/_dazzlecompile/", function (req, res) {
+            res.setHeader('content-type', 'application/javascript');
+            var b = browserify(process.cwd() + "/" + req.query["path"]).bundle();
+            console.log(process.cwd() + req.query["path"]);
+            b.on('error', console.error);
+            b.pipe(res);
+        });
+
         app.get('/', function (req, res) {
             res.render('index.ejs', {title: 'Hey', message: 'Hello there!'})
         });
+
+        /*
+        var app_dir = process.cwd();
+        var command = 'echo \'hello\' && /usr/local/bin/browserify ' + app_dir + '/components/functionalSequencer/functionalSequencer.js -o ' + app_dir + '/components/functionalSequencer/.functionalSequencer.js.compiled';
+        const {exec} = require('child_process');
+        console.log(command);
+        exec('command', (err, stdout, stderr) => {
+            if (err) {
+                // node couldn't execute the command
+                return;
+            }
+
+            // the *entire* stdout and stderr (buffered)
+            console.log(`stdout: ${stdout}`);
+            console.log(`stderr: ${stderr}`);
+        });*/
+
 
         app.listen(4242);
     });

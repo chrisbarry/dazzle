@@ -1,0 +1,42 @@
+{
+  "name": "InititalProject",
+  "scene": {
+    "root": {
+      "children": {
+        "TestCardRoot": {
+          "components": {
+            "flikHtmlRenderer": {
+              "data": {
+                "styles": {
+                  "background-color": "#333333"
+                }
+              }
+            }
+          },
+          "children": {
+            "View": {
+              "enabled": true,
+              "components": {
+                "emptyComponent": {},
+                "emptyView": {
+                  "data": {
+                    "text": "Hello World!",
+                    "styles": {
+                      "background-color": "green",
+                      "top": 100,
+                      "left": 100,
+                      "width": "100px",
+                      "height": "100px",
+                      "text-align": "center",
+                      "line-height": "100px"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

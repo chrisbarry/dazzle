@@ -6,6 +6,7 @@
     <style>
 
     </style>
+    <link rel='shortcut icon' type='image/x-icon' href='/engine/favicon.ico'/>
 </head>
 
 <script src="/engine/scripts/bundle.min.js"></script>
@@ -63,6 +64,21 @@
         function (key, value) {
             return key === "" ? value : decodeURIComponent(value)
         }) : {};
+
+
+    $.get(config.location).then(function (response) {
+        console.log(response);
+        response.scripts.forEach(function (script) {
+            $.getScript("/app/" + script, function () {
+                console.log("Running " + script);
+            });
+        })
+        response.buildScripts.forEach(function (script) {
+            //_dazzlecompile/?path=/components/functionalSequencer/functionalSequencer.js
+            console.log(script);
+            jQuery('<script/>').attr('src', "/_dazzlecompile/?path=" + script).appendTo('head');
+        })
+    })
 
     requireTag.onload = function () {
         window.engine42 = engine42.player("player", {

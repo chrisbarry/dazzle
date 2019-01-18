@@ -123,7 +123,9 @@
             }, 200);
         };
 
+        component.init = function(){
 
+        };
 
         //update runs on demand. Run at the end of the first init, perhaps()?
         component.update = function () {
@@ -131,6 +133,7 @@
 
         //runs every frame
         component.tick = function (globalIndex, sessionIndex) {
+            //console.log("ticking");
         };
 
         //discard and remove self properly..
