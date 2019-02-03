@@ -72,7 +72,6 @@ program
                 transform: [sourceify]
             });
             b.add(process.cwd() + "/" + req.query["path"]);
-            console.log("hello");
             console.log(process.cwd() + req.query["path"]);
             b.on('error', console.error);
             b = b.bundle();
