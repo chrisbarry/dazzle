@@ -26,7 +26,8 @@
     "commander": "2.19.0",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "ncp": "^2.0.0"
+    "ncp": "^2.0.0",
+    "sourceify": "^0.1.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

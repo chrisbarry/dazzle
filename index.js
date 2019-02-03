@@ -52,7 +52,6 @@ program
         app.use("/app", express.static(process.cwd()));
 
 
-
         //browserify party.js -o ./dist/party.js -t [ babelify --presets [ env ] ]
 
         //const {spawn} = require('child_process');
@@ -61,15 +60,22 @@ program
 
 
         var browserify = require('browserify');
-
+        var sourceify = require('sourceify');
         //app.get('/_dazzlecompile/', browserify(__dirname + '/client/file.js');s
 
         //https://github.com/browserify/browserify-handbook#using-the-api-directly
         app.get("/_dazzlecompile/", function (req, res) {
             res.setHeader('content-type', 'application/javascript');
-            var b = browserify(process.cwd() + "/" + req.query["path"]).bundle();
+            var b = browserify({
+                debug: true,
+                // options
+                transform: [sourceify]
+            });
+            b.add(process.cwd() + "/" + req.query["path"]);
+            console.log("hello");
             console.log(process.cwd() + req.query["path"]);
             b.on('error', console.error);
+            b = b.bundle();
             b.pipe(res);
         });
 
